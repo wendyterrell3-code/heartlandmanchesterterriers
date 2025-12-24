@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Heartland Manchester Terriers</title>
+  <meta name="description" content="Heartland Manchester Terriers — purpose-bred Manchester Terriers focused on health, structure, and temperament." />
+
+  <style>
+    :root{
+      --bg:#0f1115;
+      --card:#151925;
+      --text:#f3f4f6;
+      --muted:#b7bcc7;
+      --line:#2a3142;
+      --accent:#d4af37;
+      --max: 1100px;
+      --radius: 18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      background: radial-gradient(1000px 500px at 20% 0%, rgba(212,175,55,.18), transparent 60%), var(--bg);
+      color:var(--text);
+      line-height:1.5;
+    }
+    a{text-decoration:none;color:inherit}
+    .wrap{max-width:var(--max);margin:0 auto;padding:22px}
+    header{
+      position:sticky;top:0;z-index:10;
+      background:rgba(15,17,21,.85);
+      backdrop-filter:blur(8px);
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+    .nav{display:flex;justify-content:space-between;align-items:center;gap:14px}
+    .brand{font-weight:800;letter-spacing:.3px}
+    .links{display:flex;gap:12px;flex-wrap:wrap}
+    .links a{
+      color:var(--muted);
+      padding:8px 10px;
+      border-radius:12px;
+      font-size:14px;
+    }
+    .links a:hover{background:rgba(255,255,255,.06);color:var(--text)}
+    .hero{padding:70px 0 40px}
+    h1{font-size:48px;line-height:1.05;margin:0}
+    .sub{max-width:70ch;color:var(--muted);margin-top:12px}
+    .btn{
+      display:inline-block;
+      margin-top:18px;
+      padding:12px 16px;
+      border-radius:14px;
+      font-weight:700;
+      background:linear-gradient(135deg, rgba(212,175,55,.95), rgba(212,175,55,.25));
+      color:#111;
+    }
+    .section{margin:50px 0}
+    .section h2{margin-bottom:12px}
+    .grid{display:grid;gap:16px}
+    @media(min-width:900px){.grid{grid-template-columns:1fr 1fr}}
+    .card{
+      background:rgba(21,25,37,.8);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:var(--radius);
+      padding:18px;
+    }
+    .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+    .tag{
+      font-size:12px;
+      padding:6px 10px;
+      border-radius:999px;
+      background:rgba(255,255,255,.05);
+      color:var(--muted);
+      border:1px solid rgba(255,255,255,.1);
+    }
+    footer{
+      border-top:1px solid rgba(255,255,255,.08);
+      padding:30px 0;
+      color:var(--muted);
+      font-size:14px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand">Heartland Manchester Terriers</div>
+    <nav class="links">
+      <a href="#home">Home</a>
+      <a href="#foundation">Foundation Dogs</a>
+      <a href="#litters">Litters</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="hero" id="home">
+    <h1>Purpose-bred Manchester Terriers</h1>
+    <p class="sub">
+      Heartland Manchester Terriers is a small program focused on health, structure,
+      sound temperament, and responsible placement.
+    </p>
+    <a class="btn" href="#foundation">Meet Our Dogs</a>
+  </section>
+
+  <section class="section" id="foundation">
+    <h2>Foundation Dogs</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Falkor</h3>
+        <p><strong>Kairos Lucky Dragon at Heartland</strong></p>
+        <div class="tags">
+          <span class="tag">Health Tested</span>
+          <span class="tag">Stud Dog</span>
+          <span class="tag">Manchester Terrier</span>
+        </div>
+        <p style="margin-top:10px;">
+          Add show accomplishments, temperament notes, and what makes him special.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Evie</h3>
+        <p><strong>Kairos Magic Mirror at Heartland</strong></p>
+        <div class="tags">
+          <span class="tag">Health Tested</span>
+          <span class="tag">Foundation Bitch</span>
+          <span class="tag">Manchester Terrier</span>
+        </div>
+        <p style="margin-top:10px;">
+          Add her strengths, structure, and breeding goals.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="litters">
+    <h2>Litters</h2>
+    <div class="card">
+      <p><strong>Planned:</strong> Falkor × Evie</p>
+      <p>Status: Pending confirmation</p>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <h2>FAQ</h2>
+    <div class="card">
+      <p><strong>Do you health test your dogs?</strong><br>Yes. Details will be listed here.</p>
+      <p style="margin-top:10px;"><strong>Do you ship puppies?</strong><br>Transport may be available via trusted contacts.</p>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Contact</h2>
+    <div class="card">
+      <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+      <p>Location: Florida</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    © <span id="year"></span> Heartland Manchester Terriers
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
+
