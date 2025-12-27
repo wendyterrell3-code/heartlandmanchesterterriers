@@ -116,14 +116,14 @@ body {
   font-size: 14px;
   color: #6b6b6b;
 }
-/* ---------- Resources: improve contrast ---------- */
+/* ---------- Resources: high-contrast text on dark cards ---------- */
 .resource-list a,
 .resource-list a:link,
 .resource-list a:visited {
   color: #ffffff !important;
   font-weight: 600;
   text-decoration: underline;
-  text-decoration-color: rgba(255, 255, 255, 0.8);
+  text-decoration-color: rgba(255, 255, 255, 0.9);
   text-underline-offset: 4px;
 }
 
