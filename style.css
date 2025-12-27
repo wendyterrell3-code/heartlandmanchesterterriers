@@ -96,3 +96,23 @@ body {
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
+/* ---------- Force underline for resource links ---------- */
+.resource-list a {
+  font-weight: 600;
+  color: #2b2b2b;
+  text-decoration: underline !important;
+  text-decoration-color: #8a7f6a;
+  text-underline-offset: 4px;
+}
+
+.resource-list a:hover {
+  color: #6e5f44;
+  text-decoration-color: #6e5f44;
+}
+
+.resource-list small {
+  display: block;
+  margin-top: 4px;
+  font-size: 14px;
+  color: #6b6b6b;
+}
