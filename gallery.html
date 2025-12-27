@@ -335,6 +335,21 @@
     if(e.key === "Escape" && lightbox.classList.contains("open")) closeLB();
   });
 </script>
+<script>
+  const folders = document.querySelectorAll(".folder");
+
+  folders.forEach(folder => {
+    folder.addEventListener("toggle", () => {
+      if (folder.open) {
+        folders.forEach(other => {
+          if (other !== folder) {
+            other.removeAttribute("open");
+          }
+        });
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
