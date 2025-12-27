@@ -43,14 +43,13 @@
       color:#b7bcc7;
     }
 
-    /* ===== Gallery Styles (matches card aesthetic) ===== */
+    /* Gallery */
     .gallery-grid{
       display:grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap:14px;
       margin-top:14px;
     }
-
     .tile{
       border-radius:14px;
       overflow:hidden;
@@ -63,3 +62,198 @@
       transform: translateY(-2px);
       border-color: rgba(255,255,255,.18);
     }
+    .tile img{
+      width:100%;
+      height:230px;
+      object-fit:cover;
+      display:block;
+      background:#0b0d12;
+    }
+    .caption{
+      padding:10px 12px;
+      font-size:14px;
+      color:#d5d7de;
+    }
+
+    /* Lightbox */
+    .lightbox{
+      position:fixed;
+      inset:0;
+      display:none;
+      align-items:center;
+      justify-content:center;
+      padding:18px;
+      background: rgba(0,0,0,.78);
+      z-index:9999;
+    }
+    .lightbox.open{display:flex}
+    .lightbox-card{
+      width:min(1100px, 100%);
+      border-radius:16px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.10);
+      background:#0b0d12;
+      box-shadow: 0 14px 50px rgba(0,0,0,.45);
+    }
+    .lightbox-card img{
+      width:100%;
+      height:auto;
+      display:block;
+      background:#000;
+    }
+    .lightbox-bar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding:10px 12px;
+      color:#f3f4f6;
+      background: rgba(255,255,255,.05);
+      border-top:1px solid rgba(255,255,255,.08);
+      font-size:14px;
+    }
+    .btn{
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.06);
+      color:#f3f4f6;
+      padding:8px 10px;
+      border-radius:12px;
+      cursor:pointer;
+      white-space:nowrap;
+    }
+    .btn:hover{background: rgba(255,255,255,.10)}
+
+    @media (max-width:520px){
+      .tile img{height:180px}
+      .links a{margin-left:10px}
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="wrap nav">
+    <strong>Heartland Manchester Terriers</strong>
+    <nav class="links" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="foundation.html">Foundation Dogs</a>
+      <a href="faq.html">FAQ</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="links.html">Resources</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <h1>Gallery</h1>
+  <p style="color:#b7bcc7;">
+    Photos from the Heartland program will live here. (This page is ready — just add images into <strong>images/</strong>.)
+  </p>
+
+  <div class="card">
+    <h2>Highlights</h2>
+    <div class="tags">
+      <span>Falkor</span>
+      <span>Evie</span>
+      <span>Show Ring</span>
+      <span>Movement</span>
+      <span>Heartland</span>
+    </div>
+
+    <div class="gallery-grid">
+      <!-- These two should load now because they already exist on your Foundations page -->
+      <div class="tile" tabindex="0" data-full="images/falkor-6.png" data-caption="Falkor">
+        <img src="images/falkor-6.png" alt="Falkor" loading="lazy">
+        <div class="caption">Falkor</div>
+      </div>
+
+      <div class="tile" tabindex="0" data-full="images/evie-2.jpg" data-caption="Evie">
+        <img src="images/evie-2.jpg" alt="Evie" loading="lazy">
+        <div class="caption">Evie</div>
+      </div>
+    </div>
+
+    <p style="color:#b7bcc7;margin-top:16px;">
+      Add more photos by copying one tile and changing the filename + caption.
+    </p>
+  </div>
+</main>
+
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <div class="lightbox-card" role="dialog" aria-modal="true">
+    <img id="lbImg" alt="">
+    <div class="lightbox-bar">
+      <div id="lbCap"></div>
+      <button class="btn" id="lbClose" type="button">Close ✕</button>
+    </div>
+  </div>
+</div>
+
+<footer style="
+  margin-top:40px;
+  padding:20px 12px;
+  text-align:center;
+  border-top:1px solid rgba(255,255,255,.08);
+  color:#b7bcc7;
+  font-size:13px;
+">
+  <p style="margin:0;">
+    <strong style="color:#f2e6c9;">Heartland Manchester Terriers</strong> • Florida
+  </p>
+
+  <p style="margin:6px 0 0;">
+    <a href="mailto:wendyterrell3@gmail.com"
+       style="color:#f2e6c9;text-decoration:underline;">
+      wendyterrell3@gmail.com
+    </a>
+  </p>
+
+  <p style="margin:10px 0 0;font-size:12px;color:#8f95a3;">
+    © 2026 Heartland Manchester Terriers. All rights reserved.
+  </p>
+</footer>
+
+<script>
+  const tiles = document.querySelectorAll(".tile");
+  const lightbox = document.getElementById("lightbox");
+  const lbImg = document.getElementById("lbImg");
+  const lbCap = document.getElementById("lbCap");
+  const lbClose = document.getElementById("lbClose");
+
+  function openLB(src, cap){
+    lbImg.src = src;
+    lbImg.alt = cap || "Gallery image";
+    lbCap.textContent = cap || "";
+    lightbox.classList.add("open");
+    lightbox.setAttribute("aria-hidden","false");
+    document.body.style.overflow = "hidden";
+  }
+  function closeLB(){
+    lightbox.classList.remove("open");
+    lightbox.setAttribute("aria-hidden","true");
+    lbImg.src = "";
+    document.body.style.overflow = "";
+  }
+
+  tiles.forEach(t => {
+    t.addEventListener("click", () => openLB(t.dataset.full, t.dataset.caption));
+    t.addEventListener("keydown", (e) => {
+      if(e.key === "Enter") openLB(t.dataset.full, t.dataset.caption);
+    });
+  });
+
+  lbClose.addEventListener("click", closeLB);
+  lightbox.addEventListener("click", (e) => {
+    if(e.target === lightbox) closeLB();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if(e.key === "Escape" && lightbox.classList.contains("open")) closeLB();
+  });
+</script>
+
+</body>
+</html>
+
