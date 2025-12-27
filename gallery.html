@@ -154,50 +154,84 @@
     Photos of Heartland 
   </p>
 
-  <div class="card">
-    <h2>Highlights</h2>
-    <div class="tags">
+<div class="card">
+  <h2>Gallery</h2>
+  <p style="color:#b7bcc7;margin-top:-6px;">
+    Click a section to view photos. Each section opens like a folder.
+  </p>
+
+  <!-- FOLDER: Falkor -->
+  <details class="folder" open>
+    <summary class="folder-title">
       <span>Falkor</span>
-      <span>Evie</span>
-      <span>Show Ring</span>
-      <span>Movement</span>
-      <span>Heartland</span>
-    </div>
+      <span class="folder-note">Structure • Movement • Show ring</span>
+    </summary>
 
     <div class="gallery-grid">
-      <!-- These two should load now because they already exist on your Foundations page -->
       <div class="tile" tabindex="0" data-full="images/falkor-1.jpg" data-caption="Falkor">
         <img src="images/falkor-1.jpg" alt="Falkor" loading="lazy">
         <div class="caption">Falkor</div>
       </div>
 
+      <!-- Add more Falkor tiles here -->
+      <!--
+      <div class="tile" tabindex="0" data-full="images/falkor-01.jpg" data-caption="Falkor — movement">
+        <img src="images/falkor-01.jpg" alt="Falkor moving" loading="lazy">
+        <div class="caption">Falkor — movement</div>
+      </div>
+      -->
+    </div>
+  </details>
+
+  <!-- FOLDER: Evie -->
+  <details class="folder">
+    <summary class="folder-title">
+      <span>Evie</span>
+      <span class="folder-note">Balance • Femininity • Type</span>
+    </summary>
+
+    <div class="gallery-grid">
       <div class="tile" tabindex="0" data-full="images/evie-2.jpg" data-caption="Evie">
         <img src="images/evie-2.jpg" alt="Evie" loading="lazy">
         <div class="caption">Evie</div>
       </div>
+
+      <!-- Put the new Evie photo you added right here -->
+      <!-- Example: -->
+      <!--
+      <div class="tile" tabindex="0" data-full="images/evie-new-01.jpg" data-caption="Evie — show day">
+        <img src="images/evie-new-01.jpg" alt="Evie show day" loading="lazy">
+        <div class="caption">Evie — show day</div>
+      </div>
+      -->
     </div>
-<div class="tile" tabindex="0"
-     data-full="images/evie-1.png"
-     data-caption="Evie — Headshot">
-  <img src="images/evie-1.png" alt="Evie Headshot" loading="lazy">
-  <div class="caption">Evie — Headshot</div>
+  </details>
+
+  <!-- FOLDER: Puppies -->
+  <details class="folder">
+    <summary class="folder-title">
+      <span>Puppies</span>
+      <span class="folder-note">Coming soon</span>
+    </summary>
+
+    <div style="margin-top:12px;color:#b7bcc7;">
+      Puppy photos will be added here once the Falkor × Evie litter is confirmed.
+    </div>
+  </details>
+
+  <!-- FOLDER: Just for Fun -->
+  <details class="folder">
+    <summary class="folder-title">
+      <span>Just for Fun</span>
+      <span class="folder-note">Life at Heartland</span>
+    </summary>
+
+    <div class="gallery-grid">
+      <!-- Add fun/random tiles here later -->
+    </div>
+  </details>
 </div>
 
-    <p style="color:#b7bcc7;margin-top:16px;">
-      Add more photos by copying one tile and changing the filename + caption.
-    </p>
-  </div>
-</main>
-
-<div class="lightbox" id="lightbox" aria-hidden="true">
-  <div class="lightbox-card" role="dialog" aria-modal="true">
-    <img id="lbImg" alt="">
-    <div class="lightbox-bar">
-      <div id="lbCap"></div>
-      <button class="btn" id="lbClose" type="button">Close ✕</button>
-    </div>
-  </div>
-</div>
 
 <footer style="
   margin-top:40px;
