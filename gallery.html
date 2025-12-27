@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery | Heartland Manchester Terriers</title>
+
+  <!-- Use your existing site stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* --- Gallery Page Add-ons (safe, scoped) --- */
+    .gallery-header {
+      text-align: center;
+      margin: 0 0 18px 0;
+    }
+
+    .gallery-subtitle {
+      max-width: 900px;
+      margin: 8px auto 0 auto;
+      line-height: 1.5;
+      opacity: 0.9;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .gallery-item {
+      border-radius: 14px;
+      overflow: hidden;
+      background: #ffffff;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      cursor: pointer;
+      transition: transform 0.12s ease;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-2px);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .gallery-caption {
+      padding: 10px 12px;
+      font-size: 0.95rem;
+    }
+
+    /* Lightbox */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.78);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 18px;
+      z-index: 9999;
+    }
+
+    .lightbox.open {
+      display: flex;
+    }
+
+    .lightbox-content {
+      max-width: 1100px;
+      width: 100%;
+      background: #111;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 14px 50px rgba(0,0,0,0.45);
+      position: relative;
+    }
+
+    .lightbox-content img {
+      width: 100%;
+      height: auto;
+      display: block;
+      background: #000;
+    }
+
+    .lightbox-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 12px;
+      color: #fff;
+      font-size: 0.95rem;
+      background: rgba(0,0,0,0.55);
+    }
+
+    .lightbox-close {
+      border: 0;
+      background: rgba(255,255,255,0.12);
+      color: #fff;
+      padding: 8px 10px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .lightbox-close:hover {
+      background: rgba(255,255,255,0.20);
+    }
+
+    /* Make sure it still looks good on small screens */
+    @media (max-width: 520px) {
+      .gallery-item img { height: 180px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page-container">
+    <!-- If you already have a shared header/nav snippet, keep it consistent.
+         Otherwise, paste your existing nav here. -->
+
+    <header class="gallery-header">
+      <h1>Gallery</h1>
+      <p class="gallery-subtitle">
+        A little Heartland highlight reel — stacked, moving, and occasionally acting like they own the place (because they do).
+      </p>
+    </header>
+
+    <main>
+      <section class="gallery-grid" id="galleryGrid">
+        <!-- Update these image paths + captions -->
+        <figure class="gallery-item" data-full="images/falkor-01.jpg" data-caption="Falkor — stacked & steady">
+          <img src="images/falkor-01.jpg" alt="Falkor stacked" loading="lazy">
+          <figcaption class="gallery-caption">Falkor — stacked & steady</figcaption>
+        </figure>
+
+        <figure class="gallery-item" data-full="images/evie-01.jpg" data-caption="Evie — show ring magic">
+          <img src="images/evie-01.jpg" alt="Evie in the ring" loading="lazy">
+          <figcaption class="gallery-caption">Evie — show ring magic</figcaption>
+        </figure>
+
+        <figure class="gallery-item" data-full="images/falkor-02.jpg" data-caption="Movement matters">
+          <img src="images/falkor-02.jpg" alt="Falkor moving" loading="lazy">
+          <figcaption class="gallery-caption">Movement matters</figcaption>
+        </figure>
+
+        <figure class="gallery-item" data-full="images/evie-02.jpg" data-caption="Queen energy">
+          <img src="images/evie-02.jpg" alt="Evie portrait" loading="lazy">
+          <figcaption class="gallery-caption">Queen energy</figcaption>
+        </figure>
+      </section>
+    </main>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <div class="lightbox-content" role="dialog" aria-modal="true">
+        <img id="lightboxImg" alt="">
+        <div class="lightbox-bar">
+          <div id="lightboxCaption"></div>
+          <button class="lightbox-close" id="lightboxClose" type="button">Close ✕</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- If you have a shared footer, keep it consistent -->
+  </div>
+
+  <script>
+    const items = document.querySelectorAll(".gallery-item");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightboxImg");
+    const lightboxCaption = document.getElementById("lightboxCaption");
+    const lightboxClose = document.getElementById("lightboxClose");
+
+    function openLightbox(src, caption) {
+      lightboxImg.src = src;
+      lightboxImg.alt = caption || "Gallery image";
+      lightboxCaption.textContent = caption || "";
+      lightbox.classList.add("open");
+      lightbox.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove("open");
+      lightbox.setAttribute("aria-hidden", "true");
+      lightboxImg.src = "";
+      document.body.style.overflow = "";
+    }
+
+    items.forEach(item => {
+      item.addEventListener("click", () => {
+        openLightbox(item.dataset.full, item.dataset.caption);
+      });
+      item.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") openLightbox(item.dataset.full, item.dataset.caption);
+      });
+      item.tabIndex = 0;
+    });
+
+    lightboxClose.addEventListener("click", closeLightbox);
+    lightbox.addEventListener("click", (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && lightbox.classList.contains("open")) closeLightbox();
+    });
+  </script>
+</body>
+</html>
