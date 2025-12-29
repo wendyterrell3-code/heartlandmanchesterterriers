@@ -74,9 +74,6 @@ body {
   border: 1px solid rgba(0,0,0,0.06);
 }
 
-.story-link a, .new-here a {
-  text-decoration: underline;
-}
 /* Highlighted "Our Story" link (FAQ + cross-links) */
 .new-here a.story-highlight,
 .story-link a.story-highlight {
