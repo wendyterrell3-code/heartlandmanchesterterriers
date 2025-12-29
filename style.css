@@ -45,16 +45,6 @@ body {
   font-size: 17px;
   line-height: 1.6;
 }
-/* Highlighted "Our Story" link */
-.story-highlight {
-  font-weight: 700;
-  text-decoration: underline;
-  color: #7a2e2e; /* deep, elegant accent (wine/burgundy) */
-}
-
-.story-highlight:hover {
-  color: #9b3a3a;
-}
 
 /* ===== Our Story / About Me ===== */
 .story-section {
@@ -86,6 +76,16 @@ body {
 
 .story-link a, .new-here a {
   text-decoration: underline;
+}
+/* Highlighted "Our Story" link */
+.story-highlight {
+  font-weight: 700;
+  text-decoration: underline;
+  color: #7a2e2e; /* deep, elegant accent (wine/burgundy) */
+}
+
+.story-highlight:hover {
+  color: #9b3a3a;
 }
 
 /* ---------- Resource Links ---------- */
