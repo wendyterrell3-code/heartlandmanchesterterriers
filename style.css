@@ -77,16 +77,19 @@ body {
 .story-link a, .new-here a {
   text-decoration: underline;
 }
-/* Highlighted "Our Story" link */
-.story-highlight {
+/* Highlighted "Our Story" link (FAQ + cross-links) */
+.new-here a.story-highlight,
+.story-link a.story-highlight {
   font-weight: 700;
   text-decoration: underline;
-  color: #7a2e2e; /* deep, elegant accent (wine/burgundy) */
+  color: #7a2e2e;
 }
 
-.story-highlight:hover {
+.new-here a.story-highlight:hover,
+.story-link a.story-highlight:hover {
   color: #9b3a3a;
 }
+
 
 /* ---------- Resource Links ---------- */
 .resource-list {
