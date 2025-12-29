@@ -45,6 +45,37 @@ body {
   font-size: 17px;
   line-height: 1.6;
 }
+/* ===== Our Story / About Me ===== */
+.story-section {
+  margin: 26px 0;
+  padding: 22px;
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+.story-section h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.story-content p {
+  line-height: 1.65;
+  margin: 12px 0;
+}
+
+/* Cross-links on other pages */
+.story-link, .new-here {
+  margin: 18px 0;
+  padding: 14px 16px;
+  background: #ffffff;
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+.story-link a, .new-here a {
+  text-decoration: underline;
+}
 
 /* ---------- Resource Links ---------- */
 .resource-list {
