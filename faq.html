@@ -13,17 +13,21 @@
       color:#f3f4f6;
       line-height:1.5;
     }
+
     a { color: inherit; }
 
     header{
       background:#151925;
       border-bottom:1px solid rgba(255,255,255,.08);
     }
+
     .wrap{max-width:1100px;margin:0 auto;padding:22px}
     .nav{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
-    .links a{color:#b7bcc7;margin-left:12px}
+    .links a{color:#b7bcc7;margin-left:12px;text-decoration:none}
     .links a:hover{color:#fff}
+
     h1{margin-top:0}
+
     .card{
       background:#151925;
       border:1px solid rgba(255,255,255,.08);
@@ -31,310 +35,251 @@
       padding:18px;
       margin-top:16px;
     }
-  .footer-logo{
-  max-width:220px;
-  width:100%;
-  height:auto;
-  margin:0 auto 14px;
-  display:block;
-}
 
-    .muted{color:#b7bcc7}
-    .row{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
-    .chip{
-      display:inline-block;
-      padding:10px 12px;
-      border-radius:14px;
-      border:1px solid rgba(255,255,255,.10);
-      background:rgba(255,255,255,.04);
+    .footer-logo{
+      max-width:220px;
+      width:100%;
+      height:auto;
+      margin:0 auto 14px;
+      display:block;
     }
-   
+
+    /* FAQ details */
+    details {
+      margin-bottom: 12px;
+      padding: 10px 14px;
+      background: #151925;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,.08);
+    }
+
+    summary {
+      font-weight: 600;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    summary::marker { display: none; }
+
+    details p {
+      margin-top: 10px;
+      color: #b7bcc7;
+    }
+
+    /* "New here" box */
+    .new-here{
+      margin: 18px 0;
+      padding: 14px 16px;
+      background:#151925;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,.08);
+    }
+
+    /* Highlighted Our Story link */
+    .new-here a.story-highlight{
+      font-weight: 800;
+      text-decoration: underline;
+      color: #f2e6c9;
+      text-underline-offset: 3px;
+    }
+
+    .new-here a.story-highlight:hover{
+      color:#ffffff;
+    }
+
+    /* Apply button hover */
+    .apply-btn { transition: all .15s ease; }
+    .apply-btn:hover { filter: brightness(1.08); transform: translateY(-1px); }
   </style>
-<link rel="stylesheet" href="style.css">
 </head>
-<style>
-  .apply-btn { transition: all .15s ease; }
-  .apply-btn:hover { filter: brightness(1.08); transform: translateY(-1px); }
-</style>
 
 <body>
-<link rel="stylesheet" href="style.css">
 
 <header>
   <div class="wrap nav">
     <strong>Heartland Manchester Terriers</strong>
-   <nav class="links">
-  <a href="index.html">Home</a>
-  <a href="foundation.html">Foundation Dogs</a>
-  <a href="history.html">Behind the Pedigree</a>
-  <a href="faq.html">FAQ</a>
-  <a href="gallery.html">Gallery</a>
-  <a href="links.html">Resources</a>
-  <a href="contact.html">Contact</a>
-  <a href="index.html#our-story">Our Story</a>
-</nav>
 
-
+    <nav class="links">
+      <a href="index.html">Home</a>
+      <a href="foundation.html">Foundation Dogs</a>
+      <a href="history.html">Behind the Pedigree</a>
+      <a href="faq.html">FAQ</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="links.html">Resources</a>
+      <a href="contact.html">Contact</a>
+      <a href="index.html#our-story">Our Story</a>
+    </nav>
   </div>
 </header>
 
 <main class="wrap">
   <h2>Frequently Asked Questions</h2>
-<p>
-Clear, thoughtful answers to common questions about our dogs, breeding practices, and placement process.
-</p>
-<style>
-details {
-  margin-bottom: 12px;
-  padding: 10px 14px;
-  background: #151925;
-  border-radius: 12px;
-}
+  <p>Clear, thoughtful answers to common questions about our dogs, breeding practices, and placement process.</p>
 
-summary {
-  font-weight: 600;
-  cursor: pointer;
-  list-style: none;
-}
-
-summary::marker {
-  display: none;
-}
-
-details p {
-  margin-top: 10px;
-  color: #b7bcc7;
-}
-</style>
-<div class="new-here">
-  <p>
-    <strong>New here?</strong>
-    Start with
-    <a href="index.html#our-story" class="story-highlight">our story</a>
-   to learn about Heartland Manchester Terriers and how this program began.
-  </p>
-</div>
-
-
-
-  <details>
-  <summary>What is the price of a puppy?</summary>
-  <p>
-    Puppies from Heartland Manchester Terriers are $2,000.
-    A non-refundable deposit of $500 is required once puppies are confirmed,
-    with the remaining balance of $1,500 due at the time of pickup.
-  </p>
-  <p>
-    Pricing reflects careful breeding, comprehensive health testing,
-    responsible puppy raising, and lifetime breeder support.
-  </p>
-</details>
-
-<details>
-  <summary>What ear options are available?</summary>
-  <p>
-    Manchester Terriers may have natural ears or cropped ears. Natural ears may be fully erect or button ears.
-    For conformation showing in Standard Manchester Terriers, natural ears must be erect.
-  </p>
-
-  <p>
-    Toy Manchester Terriers must have natural, erect ears for conformation showing.
-  </p>
-
-  <p>
-    Ear cropping is optional and is not required. If a puppy is to be cropped, this must be discussed in advance.
-    Cropping involves additional cost unless the buyer has access to a reputable veterinarian experienced in the procedure. Any ear cropping must comply with local laws and veterinary guidelines.
-  </p>
-
-  <p>
-    We are happy to discuss ear options, timelines, and expectations so buyers can make an informed decision.
-  </p>
-</details>
-  
-<details>
-  <summary>What is a Standard Manchester Terrier like to live with?</summary>
-  <p>
-    Standard Manchester Terriers are intelligent, loyal, and observant dogs that form strong bonds with their people.
-    They are active without being frantic and do best in homes that value structure, engagement, and companionship.
-    While affectionate, they are typically thoughtful rather than indiscriminately social and appreciate clear expectations.
-  </p>
-</details>
-
-<details>
-  <summary>Do you health test your dogs?</summary>
-  <p>
-    Yes. All breeding dogs at Heartland Manchester Terriers complete comprehensive health testing appropriate for the breed,
-    with results registered through OFA where applicable. Testing includes genetic screening and clinical evaluations,
-    with additional testing completed as age and circumstance allow.
-  </p>
-</details>
-
-<details>
-  <summary>How often do you have litters?</summary>
-  <p>
-    Heartland Manchester Terriers is a small, purpose-driven program. Litters are planned selectively and infrequently,
-    with each breeding evaluated individually. Quality, health, and long-term responsibility are prioritized over volume.
-  </p>
-</details>
-
-<details>
-  <summary>How are puppies raised?</summary>
-  <p>
-    Puppies are raised in a home environment with early socialization and age-appropriate enrichment.
-    Care is taken to support confidence, resilience, and stability during critical developmental periods.
-  </p>
-</details>
-
-<details>
-  <summary>How do you decide puppy placement?</summary>
-  <p>
-    Placement decisions are made thoughtfully, considering temperament, structure, and the individual goals of each home.
-    While preferences are considered, the priority is matching each puppy to the environment where it is most likely to thrive.
-  </p>
-</details>
-
-<details>
-  <summary>Are puppies sold with full registration?</summary>
-  <p>
-    Pet and companion puppies are sold with limited registration. Full registration may be considered after spay or neuter
-    is completed within the timeframe outlined in the purchase contract. Any breeding arrangements are discussed individually.
-  </p>
-</details>
-
-<details>
-  <summary>What is your spay/neuter policy?</summary>
-  <p>
-    Spay or neuter timing is based on the health and development of the individual dog and is outlined in the purchase contract.
-    The goal is to support long-term physical well-being while preventing inappropriate breeding.
-  </p>
-</details>
-
-<details>
-  <summary>Do you offer a health guarantee?</summary>
-  <p>
-    Yes. Puppies are sold with a written health guarantee outlined in the purchase contract.
-    This guarantee reflects responsible breeding practices and reasonable expectations.
-  </p>
-</details>
-
-<details>
-  <summary>What happens if an owner can no longer keep their dog?</summary>
-  <p>
-    Any dog bred by Heartland Manchester Terriers must be returned to us or placed with our involvement.
-    This lifetime responsibility ensures no dog from our program is ever left without support.
-  </p>
-</details>
-
-<details>
-  <summary>Do you stay in contact with puppy owners?</summary>
-  <p>
-    Yes. We value ongoing communication and appreciate updates throughout the dog’s life.
-    Staying in touch helps us support our dogs long-term and informs future breeding decisions.
-  </p>
-</details>
-
-  <details>
-  <summary>Can you tell me more about the pedigrees behind your dogs?</summary>
-  <p>
-   Yes. The pedigrees behind our dogs reflect decades of purposeful breeding by established programs
-    known for correct type, sound movement, and long-term consistency. Rather than focusing on names
-    alone, we evaluate how structure, temperament, and reliability appear repeatedly across generations.
-  </p>
-     <p style="color:#b7bcc7;">
-    We’ve written more about the history, influences, and philosophy behind our pedigrees here:
-  </p>
-
-  <p>
-    <a href="history.html" style="
-      font-family:'Palatino Linotype','Book Antiqua',Palatino,serif;
-      color:#f2e6c9;
-      font-weight:600;
-      text-decoration:underline;
-    ">
-      → Read: Behind the Pedigree
-    </a>
-  </p>
-</details>
-  
-<section class="section" id="contact-start">
-  <h2>Puppy Inquiry</h2>
-
-  <div class="card">
-    <p style="margin-top:0;">
-      The best way to inquire about a puppy is to complete our Puppy Inquiry Form. This helps us understand your home, goals, and what you’re looking for.
-    </p>
-
-    <div style="text-align:center;margin:18px 0 6px;">
-      <a class="apply-btn"
-         href="https://docs.google.com/forms/d/e/1FAIpQLSdFrwgoEsrMboqwQTsBiYT7viUyi6e-2KryoACAHA9YzQlpdg/viewform?usp=dialog"
-         target="_blank"
-         style="
-           display:inline-block;
-           padding:12px 28px;
-           border-radius:999px;
-           background:#6a4e32;
-           color:#f2e6c9;
-           text-decoration:none;
-           font-family:'Palatino Linotype','Book Antiqua',Palatino,serif;
-           font-weight:700;
-           font-size:18px;
-           letter-spacing:.3px;
-           box-shadow:0 8px 20px rgba(0,0,0,.35);
-         ">
-        Apply for a Puppy
-      </a>
-    </div>
-
-    <p style="margin-top:12px;color:#b7bcc7;font-size:14px;text-align:center;">
-      The form opens in a new tab. We review inquiries carefully and respond as soon as we can.
-    </p>
-
-    <hr style="border:none;border-top:1px solid rgba(255,255,255,.08);margin:18px 0;">
-
+  <div class="new-here">
     <p style="margin:0;">
-      For general questions not answered in our FAQ, you may email:
-      <br>
-      <a href="mailto:wendyterrell3@gmail.com"
-         style="color:#f2e6c9;text-decoration:underline;font-weight:600;">
-        wendyterrell3@gmail.com
-      </a>
-    </p>
-
-    <p style="margin-top:12px;color:#b7bcc7;font-size:14px;">
-      Please note: puppies are $2,000 with a $500 deposit once confirmed and the remaining $1,500 due at pickup.
+      <strong>New here?</strong>
+      Start with
+      <a href="index.html#our-story" class="story-highlight">our story</a>
+      to learn about Heartland Manchester Terriers and how this program began.
     </p>
   </div>
-</section>
 
-</main>
-<footer style="
-  margin-top:40px;
-  padding:20px 12px;
-  text-align:center;
-  border-top:1px solid rgba(255,255,255,.08);
-  color:#b7bcc7;
-  font-size:13px;
-">
+  <details>
+    <summary>What is the price of a puppy?</summary>
+    <p>
+      Puppies from Heartland Manchester Terriers are $2,000.
+      A non-refundable deposit of $500 is required once puppies are confirmed,
+      with the remaining balance of $1,500 due at the time of pickup.
+    </p>
+    <p>
+      Pricing reflects careful breeding, comprehensive health testing,
+      responsible puppy raising, and lifetime breeder support.
+    </p>
+  </details>
 
-  <p style="margin:0;">
-    <img src="images/logo.png"
-     alt="Heartland Manchester Terriers logo"
-     class="footer-logo">
+  <details>
+    <summary>What ear options are available?</summary>
+    <p>
+      Manchester Terriers may have natural ears or cropped ears. Natural ears may be fully erect or button ears.
+      For conformation showing in Standard Manchester Terriers, natural ears must be erect.
+    </p>
+    <p>
+      Toy Manchester Terriers must have natural, erect ears for conformation showing.
+    </p>
+    <p>
+      Ear cropping is optional and is not required. If a puppy is to be cropped, this must be discussed in advance.
+      Cropping involves additional cost unless the buyer has access to a reputable veterinarian experienced in the procedure.
+      Any ear cropping must comply with local laws and veterinary guidelines.
+    </p>
+    <p>
+      We are happy to discuss ear options, timelines, and expectations so buyers can make an informed decision.
+    </p>
+  </details>
 
-    <strong style="color:#f2e6c9;">Heartland Manchester Terriers</strong> • Florida
-  </p>
+  <details>
+    <summary>What is a Standard Manchester Terrier like to live with?</summary>
+    <p>
+      Standard Manchester Terriers are intelligent, loyal, and observant dogs that form strong bonds with their people.
+      They are active without being frantic and do best in homes that value structure, engagement, and companionship.
+      While affectionate, they are typically thoughtful rather than indiscriminately social and appreciate clear expectations.
+    </p>
+  </details>
 
-  <p style="margin:6px 0 0;">
-    <a href="mailto:wendyterrell3@gmail.com"
-       style="color:#f2e6c9;text-decoration:underline;">
-      wendyterrell3@gmail.com
-    </a>
-  </p>
+  <details>
+    <summary>Do you health test your dogs?</summary>
+    <p>
+      Yes. All breeding dogs at Heartland Manchester Terriers complete comprehensive health testing appropriate for the breed,
+      with results registered through OFA where applicable. Testing includes genetic screening and clinical evaluations,
+      with additional testing completed as age and circumstance allow.
+    </p>
+  </details>
 
-  <p style="margin:10px 0 0;font-size:12px;color:#8f95a3;">
-    © 2026 Heartland Manchester Terriers. All rights reserved.
-  </p>
-</footer>
+  <details>
+    <summary>How often do you have litters?</summary>
+    <p>
+      Heartland Manchester Terriers is a small, purpose-driven program. Litters are planned selectively and infrequently,
+      with each breeding evaluated individually. Quality, health, and long-term responsibility are prioritized over volume.
+    </p>
+  </details>
 
-</body>
-</html>
+  <details>
+    <summary>How are puppies raised?</summary>
+    <p>
+      Puppies are raised in a home environment with early socialization and age-appropriate enrichment.
+      Care is taken to support confidence, resilience, and stability during critical developmental periods.
+    </p>
+  </details>
+
+  <details>
+    <summary>How do you decide puppy placement?</summary>
+    <p>
+      Placement decisions are made thoughtfully, considering temperament, structure, and the individual goals of each home.
+      While preferences are considered, the priority is matching each puppy to the environment where it is most likely to thrive.
+    </p>
+  </details>
+
+  <details>
+    <summary>Are puppies sold with full registration?</summary>
+    <p>
+      Pet and companion puppies are sold with limited registration. Full registration may be considered after spay or neuter
+      is completed within the timeframe outlined in the purchase contract. Any breeding arrangements are discussed individually.
+    </p>
+  </details>
+
+  <details>
+    <summary>What is your spay/neuter policy?</summary>
+    <p>
+      Spay or neuter timing is based on the health and development of the individual dog and is outlined in the purchase contract.
+      The goal is to support long-term physical well-being while preventing inappropriate breeding.
+    </p>
+  </details>
+
+  <details>
+    <summary>Do you offer a health guarantee?</summary>
+    <p>
+      Yes. Puppies are sold with a written health guarantee outlined in the purchase contract.
+      This guarantee reflects responsible breeding practices and reasonable expectations.
+    </p>
+  </details>
+
+  <details>
+    <summary>What happens if an owner can no longer keep their dog?</summary>
+    <p>
+      Any dog bred by Heartland Manchester Terriers must be returned to us or placed with our involvement.
+      This lifetime responsibility ensures no dog from our program is ever left without support.
+    </p>
+  </details>
+
+  <details>
+    <summary>Do you stay in contact with puppy owners?</summary>
+    <p>
+      Yes. We value ongoing communication and appreciate updates throughout the dog’s life.
+      Staying in touch helps us support our dogs long-term and informs future breeding decisions.
+    </p>
+  </details>
+
+  <details>
+    <summary>Can you tell me more about the pedigrees behind your dogs?</summary>
+    <p>
+      Yes. The pedigrees behind our dogs reflect decades of purposeful breeding by established programs
+      known for correct type, sound movement, and long-term consistency. Rather than focusing on names
+      alone, we evaluate how structure, temperament, and reliability appear repeatedly across generations.
+    </p>
+
+    <p style="color:#b7bcc7;">
+      We’ve written more about the history, influences, and philosophy behind our pedigrees here:
+    </p>
+
+    <p>
+      <a href="history.html" style="
+        font-family:'Palatino Linotype','Book Antiqua',Palatino,serif;
+        color:#f2e6c9;
+        font-weight:600;
+        text-decoration:underline;
+      ">
+        → Read: Behind the Pedigree
+      </a>
+    </p>
+  </details>
+
+  <section class="section" id="contact-start">
+    <h2>Puppy Inquiry</h2>
+
+    <div class="card">
+      <p style="margin-top:0;">
+        The best way to inquire about a puppy is to complete our Puppy Inquiry Form. This helps us understand your home, goals, and what you’re looking for.
+      </p>
+
+      <div style="text-align:center;margin:18px 0 6px;">
+        <a class="apply-btn"
+           href="https://docs.google.com/forms/d/e/1FAIpQLSdFrwgoEsrMboqwQTsBiYT7viUyi6e-2KryoACAHA9YzQlpdg/viewform?usp=dialog"
+           target="_blank"
+           style="
+             display:inline-block;
+             padding:12px 28px;
+             border-radius:999px;
+             background:#6a4e32;
+             color:#f2e6c9;
+             text-decoration:none;
+             font-family:'P
