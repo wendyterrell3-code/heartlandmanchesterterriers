@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="style.css?v=2">
 
-  <style>
+ <style>
     body{
       margin:0;
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
@@ -21,19 +21,17 @@
       border-bottom:1px solid rgba(255,255,255,.08);
     }
     .wrap{max-width:1100px;margin:0 auto;padding:22px}
-    .nav{display:flex;justify-content:space-between;align-items:center}
-    .links a{
-      color:#b7bcc7;
-      margin-left:12px;
-    }
+    .nav{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+    .links a{color:#b7bcc7;margin-left:12px}
     .links a:hover{color:#fff}
+    h1{margin-top:0}
     .card{
       background:#151925;
       border:1px solid rgba(255,255,255,.08);
       border-radius:16px;
       padding:18px;
-      margin-top:20px;
-     }
+      margin-top:16px;
+    }
   .footer-logo{
   max-width:220px;
   width:100%;
@@ -41,18 +39,22 @@
   margin:0 auto 14px;
   display:block;
 }
-   h1,h2{margin-top:0}
-    .tags span{
+
+    .muted{color:#b7bcc7}
+    .row{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
+    .chip{
       display:inline-block;
-      margin:6px 6px 0 0;
-      padding:6px 10px;
-      border-radius:999px;
-      background:rgba(255,255,255,.05);
-      font-size:12px;
-      color:#b7bcc7;
+      padding:10px 12px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.04);
     }
   </style>
 </head>
+<style>
+  .apply-btn { transition: all .15s ease; }
+  .apply-btn:hover { filter: brightness(1.08); transform: translateY(-1px); }
+</style>
 
 <body>
 
@@ -60,7 +62,7 @@
   <div class="wrap nav">
     <strong>Heartland Manchester Terriers</strong>
     <nav class="links">
-  <nav>
+    <nav>
   <a href="index.html">Home</a>
   <a href="foundation.html">Foundation Dogs</a>
   <a href="history.html">Behind the Pedigree</a>
