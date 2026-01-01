@@ -2,11 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://heartlandmanchesterterriers.com/</loc>
+    <loc>https://heartlandmanchesterterriers.com/index.html</loc>
   </url>
 
   <url>
-    <loc>https://heartlandmanchesterterriers.com/foundation-dogs.html</loc>
+    <loc>https://heartlandmanchesterterriers.com/foundation.html</loc>
+  </url>
+ 
+  <url>
+    <loc>https://heartlandmanchesterterriers.com/history.html</loc>
   </url>
 
   <url>
@@ -14,9 +18,21 @@
   </url>
 
   <url>
+    <loc>https://heartlandmanchesterterriers.com/gallery.html</loc>
+  </url>
+
+   <url>
     <loc>https://heartlandmanchesterterriers.com/links.html</loc>
   </url>
 
+   <url>
+    <loc>https://heartlandmanchesterterriers.com/contact.html</loc>
+  </url>
+
+   <url>
+    <loc>https://heartlandmanchesterterriers.com/index.html#our-story</loc>
+  </url>
+ 
   <url>
     <loc>https://heartlandmanchesterterriers.com/show.html</loc>
   </url>
